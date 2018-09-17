@@ -1,0 +1,47 @@
+git
+git help
+git -help
+git --version
+cd c:\cd C:\Andrew Leach\Uni\learning-flask
+ls
+dir
+git init
+git --config
+git config
+git config --global
+git config --list
+git.alfresco,com
+git.alfresco.com
+dir
+ls -al
+dir
+ls
+git status
+dir
+pwd
+dir
+git status
+git add routes.py
+git status
+dir
+git add README.md
+git add static/
+git add templates/
+git status
+git commit -m "Initial commit"
+git remote add origin https://github.com/leachapl/learning-flask.git
+git push -u origin master
+pip install gunicorn
+pip freeze > requirements.txt
+touch Procfile
+heroku create
+git status
+git add Procfile.txt
+git add requirements.txt
+git status
+git commit -m "Heroku config"
+git push kerku master
+git push heroku master
+heroku open
+doskey/history > HerokuCommands.log
+heroku apps:destroy

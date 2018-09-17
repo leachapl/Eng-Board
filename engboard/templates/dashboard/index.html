@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Dashboard{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+  {% for version in versions %}
+  <li><a href="{{ url_for('dashboard.version', versionid=version['id'] )}}">{{ version['name'] }}</a></li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

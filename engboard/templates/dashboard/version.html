@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Dashboard{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="card-holder">
+  {% for proddel_ticket in proddel_tickets %}
+  <div class="card {{ proddel_ticket['status'] }}" data-proddel="{{ proddel_ticket['key'] }}">
+    <div class="card-header">
+      <div class="issue-title"><h3>{{ proddel_ticket['summary'] }}</h3></div>
+      <div class="issue-key"><h4><a href="https://issues.alfresco.com/jira/browse/{{ proddel_ticket['key'] }}" target="_blank">{{ proddel_ticket['key'] }}</a></h2></div>
+      <div class="card-issue-count">LOADING</div>
+    </div>
+    <div class="progress_percent">-</div>
+    <div class="progress">
+      <div class="progress_bar"></div>
+      <span class="release">{{ proddel_ticket['release'] }}</span>   
+    </div>
+  </div>
+  {% endfor %}
+  <div class="clearfix"></div>
+</div>
+<script src="{{ url_for('static', filename='fetch-counts.js') }}"></script>
+{% endblock %}
